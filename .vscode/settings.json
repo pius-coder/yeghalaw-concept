@@ -1,0 +1,199 @@
+{
+  // ── AUTO-UPDATES & TELEMETRY ──
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "telemetry.telemetryLevel": "off",
+  "update.mode": "none",
+  "release.channel": "stable",
+
+  // ── DISABLE COPILOT / AI ──
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.chat.localeOverride": "en",
+  "copilot.enableCodeActions": false,
+
+  // ── FILE WATCHER (aggressive) ──
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.svelte-kit/**": true,
+    "**/.next/**": true,
+    "**/.nuxt/**": true,
+    "**/.output/**": true,
+    "**/coverage/**": true,
+    "**/.cache/**": true,
+    "**/.turbo/**": true,
+    "**/.yarn/**": true,
+    "**/target/**": true,
+    "**/.gradle/**": true,
+    "**/.parcel-cache/**": true
+  },
+
+  // ── SEARCH EXCLUSIONS ──
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.svelte-kit": true,
+    "**/.git": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/.next": true,
+    "**/.output": true,
+    "**/coverage": true,
+    "**/.cache": true,
+    "**/*.map": true,
+    "**/*.min.js": true,
+    "**/*.min.css": true,
+    "**/*.svg": true,
+    "**/*.png": true,
+    "**/*.jpg": true,
+    "**/*.woff": true,
+    "**/*.woff2": true,
+    "**/*.ttf": true
+  },
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": true,
+
+  // ── EDITOR (bare minimum) ──
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.smoothScrolling": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.indentation": false,
+  "editor.guides.activeAlignment": false,
+  "editor.fontSize": 14,
+  "editor.fontLigatures": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorWidth": 2,
+  "editor.mouseWheelZoom": false,
+  "editor.linkedEditing": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  "editor.wordHighlight": "off",
+  "editor.codeLens": false,
+  "editor.suggest.showKeywords": false,
+  "editor.suggest.showSnippets": false,
+
+  // ── SEMANTIC & SYNTAX (disable heavy parsing) ──
+  "editor.semanticHighlighting.enabled": false,
+  "editor.tokenColorCustomizations": {
+    "comments": "#6A9955",
+    "keywords": "#569CD6",
+    "strings": "#CE9178",
+    "numbers": "#B5CEA8",
+    "types": "#4EC9B0"
+  },
+
+  // ── TYPESCRIPT / JAVASCRIPT (reduce load) ──
+  "typescript.tsserver.maxTsServerMemory": 512,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "javascript.suggest.autoImports": false,
+  "typescript.suggest.autoImports": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "javascript.preferences.importModuleType": "commonjs",
+  "typescript.preferences.importModuleType": "commonjs",
+  "js/ts.implicitProjectConfig.checkJs": false,
+  "js/ts.implicitProjectConfig.experimentalDecorators": false,
+  "js/ts.implicitProjectConfig.strict": false,
+
+  // ── DISABLE UNUSED / UNNECESSARY ──
+  "editor.unnecessary.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.hover.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.autoIndent": "none",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.linkedEditing": false,
+
+  // ── DIFF (minimal) ──
+  "diffEditor.renderSideBySide": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.maxComputationTime": 500,
+
+  // ── WORKBENCH UI (strip down) ──
+  "workbench.list.badges": false,
+  "workbench.tree.indent": 12,
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.showTabs": "single",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "none",
+  "workbench.editor.association": {},
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": true,
+
+  // ── TERMINAL (minimal) ──
+  "terminal.integrated.scrollback": 500,
+  "terminal.integrated.enableBell": false,
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.rendererType": "canvas",
+
+  // ── GIT (minimal) ──
+  "git.decorations.enabled": false,
+  "git.autofetch": false,
+  "git.enableSmartCommit": false,
+  "git.confirmSync": false,
+  "git.autorepositoryDetection": false,
+  "git.inputValidation": false,
+
+  // ── SCM (disable extra features) ──
+  "scm.decorations.enabled": false,
+
+  // ── BROWSER / EMBEDDED ──
+  "workbench.list.smoothScrolling": false,
+
+  // ── SVELTE (lightweight) ──
+  "svelte.enable-ts-plugin": false,
+  "svelte.plugin.svelte.note-new-transformation": false,
+
+  // ── EMMET (reduce overhead) ──
+  "emmet.triggerExpansionOnTab": false,
+
+  // ── FILES (limit operations) ──
+  "files.trimTrailingWhitespace": false,
+  "files.insertFinalNewline": false,
+  "files.trimFinalNewlines": false,
+  "files.eol": "\n",
+  "files.simpleDialog.enable": true,
+
+  // ── OUTLINE / FOLDING (reduce render) ──
+  "editor.folding": false,
+  "editor.showFoldingControls": "never",
+  "outline.enabled": false,
+
+  // ── BREADCRUMBS (disable) ──
+  "breadcrumbs.enabled": false,
+
+  // ── COLOR CUSTOMIZATIONS (reduce UI paint) ──
+  "workbench.colorCustomizations": {
+    "editor.background": "#1e1e1e",
+    "sideBar.background": "#252526"
+  }
+}
