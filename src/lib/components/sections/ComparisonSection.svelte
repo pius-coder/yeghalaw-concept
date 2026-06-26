@@ -1,11 +1,12 @@
 <script lang="ts">
   import SealCheck from 'phosphor-svelte/lib/SealCheck';
+  import { base } from '$app/paths';
 
   const portfolio = [
-    { title: 'Corporate Law Success', src: '/images/yegha/work-1.jpg' },
-    { title: 'Real Estate Transaction', src: '/images/yegha/work-2.jpg' },
-    { title: 'Immigration Case', src: '/images/yegha/work-3.jpg' },
-    { title: 'Litigation Victory', src: '/images/yegha/work-4.jpg' }
+    { title: 'Corporate Law Success', src: base + '/images/yegha/work-1.jpg' },
+    { title: 'Real Estate Transaction', src: base + '/images/yegha/work-2.jpg' },
+    { title: 'Immigration Case', src: base + '/images/yegha/work-3.jpg' },
+    { title: 'Litigation Victory', src: base + '/images/yegha/work-4.jpg' }
   ];
 
   const badges = [

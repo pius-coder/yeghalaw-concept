@@ -1,13 +1,14 @@
 <script lang="ts">
 	import TeamMemberCard from '$lib/components/ui/TeamMemberCard.svelte';
 	import SealCheck from 'phosphor-svelte/lib/SealCheck';
+	import { base } from '$app/paths';
 
 	const team = [
-		{ name: 'Terence Yegba', jobTitle: 'Founder & Managing Partner', photoSrc: '/images/yegha/team-terence.jpg' },
-		{ name: 'Laura Ngo', jobTitle: 'Senior Associate', photoSrc: '/images/yegha/team-laura.jpg' },
-		{ name: 'Ndakor Nfor', jobTitle: 'Associate Attorney', photoSrc: '/images/yegha/team-ndakor.jpg' },
-		{ name: 'Eyea Eyong', jobTitle: 'Junior Associate', photoSrc: '/images/yegha/team-eyea.jpg' },
-		{ name: 'Mebdou\'a Etienne', jobTitle: 'Legal Assistant', photoSrc: '/images/yegha/team-mebdouga.jpg' }
+		{ name: 'Terence Yegba', jobTitle: 'Founder & Managing Partner', photoSrc: base + '/images/yegha/team-terence.jpg' },
+		{ name: 'Laura Ngo', jobTitle: 'Senior Associate', photoSrc: base + '/images/yegha/team-laura.jpg' },
+		{ name: 'Ndakor Nfor', jobTitle: 'Associate Attorney', photoSrc: base + '/images/yegha/team-ndakor.jpg' },
+		{ name: 'Eyea Eyong', jobTitle: 'Junior Associate', photoSrc: base + '/images/yegha/team-eyea.jpg' },
+		{ name: 'Mebdou\'a Etienne', jobTitle: 'Legal Assistant', photoSrc: base + '/images/yegha/team-mebdouga.jpg' }
 	];
 
 	const badges = [

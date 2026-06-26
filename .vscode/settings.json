@@ -122,7 +122,7 @@
     "comments": false,
     "strings": false
   },
-  "editor.hover.enabled": false,
+  "editor.hover.enabled": "on",
   "editor.parameterHints.enabled": false,
   "editor.suggestOnTriggerCharacters": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -151,7 +151,6 @@
 
   // ── TERMINAL (minimal) ──
   "terminal.integrated.scrollback": 500,
-  "terminal.integrated.enableBell": false,
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.rendererType": "canvas",
 
@@ -195,5 +194,9 @@
   "workbench.colorCustomizations": {
     "editor.background": "#1e1e1e",
     "sideBar.background": "#252526"
-  }
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "off"
+  },
+  "terminal.integrated.enableVisualBell": false
 }
