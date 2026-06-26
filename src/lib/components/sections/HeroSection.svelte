@@ -1,8 +1,8 @@
 <script lang="ts">
 	import ButtonMain from '$lib/components/ui/ButtonMain.svelte';
+	import CloudinaryImage from '$lib/components/ui/CloudinaryImage.svelte';
 	import SealCheck from 'phosphor-svelte/lib/SealCheck';
 	import Star from 'phosphor-svelte/lib/Star';
-	import { base } from '$app/paths';
 </script>
 
 <section id="hero" class="flex flex-col items-center justify-start gap-[10px] overflow-hidden bg-white px-[50px] pb-[100px] pt-5 scroll-mt-[100px] max-md:px-[18px] max-md:pb-20">
@@ -51,8 +51,8 @@
 			<div class="relative flex min-w-[440px] flex-1 flex-col gap-6 max-md:min-w-0">
 				<div class="relative flex w-full flex-wrap gap-4">
 					<div class="flex-1 overflow-hidden rounded-[16px]">
-						<img
-							src={base + '/images/yegha/team-terence.jpg'}
+						<CloudinaryImage
+							src="/images/yegha/team-terence.jpg"
 							alt="YEGHA LAW FIRM"
 							class="aspect-[2/3] w-full object-cover"
 							width="1024"
@@ -60,8 +60,8 @@
 						/>
 					</div>
 					<div class="flex-1 overflow-hidden rounded-[16px]">
-						<img
-							src={base + '/images/yegha/corporate-law.jpg'}
+						<CloudinaryImage
+							src="/images/yegha/corporate-law.jpg"
 							alt="Legal expertise"
 							class="aspect-[2/3] w-full object-cover"
 							width="1024"
@@ -75,16 +75,16 @@
 				<div class="flex items-center gap-4">
 					<div class="flex">
 						<div class="relative -mr-4 h-12 w-12 overflow-hidden rounded-full border-2 border-white">
-							<img src={base + '/images/yegha/testimonial-1.jpg'} alt="" class="h-full w-full object-cover" />
+							<CloudinaryImage src="/images/yegha/testimonial-1.jpg" alt="" class="h-full w-full object-cover" />
 						</div>
 						<div class="relative z-10 -mr-4 h-12 w-12 overflow-hidden rounded-full border-2 border-white">
-							<img src={base + '/images/yegha/testimonial-2.jpg'} alt="" class="h-full w-full object-cover" />
+							<CloudinaryImage src="/images/yegha/testimonial-2.jpg" alt="" class="h-full w-full object-cover" />
 						</div>
 						<div class="relative z-20 -mr-4 h-12 w-12 overflow-hidden rounded-full border-2 border-white">
-							<img src={base + '/images/yegha/testimonial-3.jpg'} alt="" class="h-full w-full object-cover" />
+							<CloudinaryImage src="/images/yegha/testimonial-3.jpg" alt="" class="h-full w-full object-cover" />
 						</div>
 						<div class="relative z-30 -mr-4 h-12 w-12 overflow-hidden rounded-full border-2 border-white">
-							<img src={base + '/images/yegha/team-terence.jpg'} alt="" class="h-full w-full object-cover" />
+							<CloudinaryImage src="/images/yegha/team-terence.jpg" alt="" class="h-full w-full object-cover" />
 						</div>
 					</div>
 					<div class="font-sans text-lg leading-[1.5] text-text/60">

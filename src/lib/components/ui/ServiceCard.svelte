@@ -31,7 +31,7 @@
 		<div class="flex flex-wrap gap-2.5">
 			{#if landscapeSrc}
 				<div class="min-w-[200px] flex-1 overflow-hidden rounded-[10px]">
-					<img src={landscapeSrc} alt="" class="aspect-[4/3] h-full w-full object-cover" />
+					<img src={landscapeSrc} alt="" class="aspect-[4/3] h-full w-full object-cover" loading="lazy" />
 				</div>
 			{/if}
 			<!-- {#if portraitSrc}

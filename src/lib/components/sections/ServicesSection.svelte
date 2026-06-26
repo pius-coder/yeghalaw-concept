@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
-	import { base } from '$app/paths';
+	import { cloudinary } from '$lib/utils/cloudinary';
 	import Building from 'phosphor-svelte/lib/Building';
 	import House from 'phosphor-svelte/lib/House';
 	import IdentificationCard from 'phosphor-svelte/lib/IdentificationCard';
@@ -14,57 +14,57 @@
 		{
 			title: 'Corporate Law',
 			description: 'Expert guidance for businesses of all sizes, offering tailored legal solutions for company formation, compliance, and governance. We ensure that our clients navigate the complexities of corporate regulations efficiently while protecting their interests.',
-			landscapeSrc: base + '/images/yegha/corporate-full.jpg',
-			portraitSrc: base + '/images/yegha/corporate-law.jpg',
+			landscapeSrc: cloudinary('/images/yegha/corporate-full.jpg'),
+			portraitSrc: cloudinary('/images/yegha/corporate-law.jpg'),
 			icon: Building
 		},
 		{
 			title: 'Real Estate',
 			description: 'Comprehensive assistance in property transactions, leasing agreements, and regulatory compliance. We strive to protect our clients\' investments and ensure smooth dealings in the real estate market.',
-			landscapeSrc: base + '/images/yegha/real-estate-full.jpg',
-			portraitSrc: base + '/images/yegha/real-estate.jpg',
+			landscapeSrc: cloudinary('/images/yegha/real-estate-full.jpg'),
+			portraitSrc: cloudinary('/images/yegha/real-estate.jpg'),
 			icon: House
 		},
 		{
 			title: 'Immigration Law',
 			description: 'Expert advice and representation for individuals and businesses seeking visas, work permits, and residency in Cameroon. We simplify the often-complex immigration process to help our clients achieve their goals.',
-			landscapeSrc: base + '/images/yegha/immigration.jpg',
-			portraitSrc: base + '/images/yegha/immigration.jpg',
+			landscapeSrc: cloudinary('/images/yegha/immigration.jpg'),
+			portraitSrc: cloudinary('/images/yegha/immigration.jpg'),
 			icon: IdentificationCard
 		},
 		{
 			title: 'Litigation',
 			description: 'Robust litigation services to protect our clients\' rights in disputes. Our skilled attorneys represent clients in various legal matters, from contract disputes to arbitration, ensuring effective resolution strategies.',
-			landscapeSrc: base + '/images/yegha/litigation-full.jpg',
-			portraitSrc: base + '/images/yegha/litigation.jpg',
+			landscapeSrc: cloudinary('/images/yegha/litigation-full.jpg'),
+			portraitSrc: cloudinary('/images/yegha/litigation.jpg'),
 			icon: Scales
 		},
 		{
 			title: 'Labour Law',
 			description: 'Labour Law governs the relationship between employers, employees, and labor organizations. We provide comprehensive counsel on workers\' rights, workplace conditions, employment contracts, wages, and dispute resolution.',
-			landscapeSrc: base + '/images/yegha/labor-law.jpg',
-			portraitSrc: base + '/images/yegha/labor-law.jpg',
+			landscapeSrc: cloudinary('/images/yegha/labor-law.jpg'),
+			portraitSrc: cloudinary('/images/yegha/labor-law.jpg'),
 			icon: Briefcase
 		},
 		{
 			title: 'Intellectual Property',
 			description: 'IP law grants creators and inventors exclusive rights over their creations, providing protection and incentivizing innovation. We help you protect your trademarks, patents, copyrights, and trade secrets.',
-			landscapeSrc: base + '/images/yegha/intellectual-property.webp',
-			portraitSrc: base + '/images/yegha/intellectual-property.webp',
+			landscapeSrc: cloudinary('/images/yegha/intellectual-property.webp'),
+			portraitSrc: cloudinary('/images/yegha/intellectual-property.webp'),
 			icon: Lightbulb
 		},
 		{
 			title: 'International Human Rights',
 			description: 'Our International Human Rights as a Service (IHRaaS) approach encompasses advocacy, education, consultation, and legal support to promote and protect human rights on a global scale.',
-			landscapeSrc: base + '/images/yegha/human-rights.jpg',
-			portraitSrc: base + '/images/yegha/human-rights.jpg',
+			landscapeSrc: cloudinary('/images/yegha/human-rights.jpg'),
+			portraitSrc: cloudinary('/images/yegha/human-rights.jpg'),
 			icon: GlobeHemisphereWest
 		},
 		{
 			title: 'Family & Succession Law',
 			description: 'Family and Succession Law deals with family relationships, inheritance, and the transfer of assets upon death. We protect family rights and ensure fair distribution of property.',
-			landscapeSrc: base + '/images/yegha/family-law.jpg',
-			portraitSrc: base + '/images/yegha/family-law.jpg',
+			landscapeSrc: cloudinary('/images/yegha/family-law.jpg'),
+			portraitSrc: cloudinary('/images/yegha/family-law.jpg'),
 			icon: UsersThree
 		}
 	];

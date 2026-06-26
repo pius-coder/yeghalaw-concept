@@ -1,7 +1,7 @@
 <script lang="ts">
 	import FaqItem from '$lib/components/ui/FaqItem.svelte';
 	import ButtonMain from '$lib/components/ui/ButtonMain.svelte';
-	import { base } from '$app/paths';
+	import CloudinaryImage from '$lib/components/ui/CloudinaryImage.svelte';
 
 	let openIndex = $state(0);
 
@@ -31,8 +31,8 @@
 		<div class="flex w-full flex-row items-stretch gap-11 max-md:flex-col">
 			<div class="relative flex min-h-[400px] flex-1 overflow-hidden rounded-[13px] max-md:min-h-[300px]" style="box-shadow:0 0.7px 0.7px -0.6px rgba(19,78,74,0.35), 0 1.8px 1.8px -1.2px rgba(19,78,74,0.34), 0 3.6px 3.6px -1.8px rgba(19,78,74,0.33), 0 6.9px 6.9px -2.3px rgba(19,78,74,0.3), 0 13.6px 13.6px -2.9px rgba(19,78,74,0.26), 0 30px 30px -3.5px rgba(19,78,74,0.15)">
 				<div class="absolute inset-0">
-					<img
-						src={base + '/images/yegha/contact-office.jpg'}
+					<CloudinaryImage
+						src="/images/yegha/contact-office.jpg"
 						alt=""
 						class="h-full w-full object-cover"
 					/>

@@ -1,12 +1,12 @@
 <script lang="ts">
   import SealCheck from 'phosphor-svelte/lib/SealCheck';
-  import { base } from '$app/paths';
+  import CloudinaryImage from '$lib/components/ui/CloudinaryImage.svelte';
 
   const portfolio = [
-    { title: 'Corporate Law Success', src: base + '/images/yegha/work-1.jpg' },
-    { title: 'Real Estate Transaction', src: base + '/images/yegha/work-2.jpg' },
-    { title: 'Immigration Case', src: base + '/images/yegha/work-3.jpg' },
-    { title: 'Litigation Victory', src: base + '/images/yegha/work-4.jpg' }
+    { title: 'Corporate Law Success', src: '/images/yegha/work-1.jpg' },
+    { title: 'Real Estate Transaction', src: '/images/yegha/work-2.jpg' },
+    { title: 'Immigration Case', src: '/images/yegha/work-3.jpg' },
+    { title: 'Litigation Victory', src: '/images/yegha/work-4.jpg' }
   ];
 
   const badges = [
@@ -31,7 +31,7 @@
     <div class="grid w-full gap-6 sm:grid-cols-2">
       {#each portfolio as item}
         <div class="group relative overflow-hidden rounded-[16px]">
-          <img src={item.src} alt={item.title} class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <CloudinaryImage src={item.src} alt={item.title} class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div class="absolute bottom-0 left-0 p-6">
             <h3 class="font-sans text-lg font-semibold text-white">{item.title}</h3>
