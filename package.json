@@ -15,11 +15,13 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.63.0",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"@tailwindcss/forms": "^0.5.11",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.3.0",
+		"phosphor-svelte": "^3.1.0",
 		"prettier": "^3.8.3",
 		"prettier-plugin-svelte": "^4.1.0",
 		"prettier-plugin-tailwindcss": "^0.8.0",
@@ -30,8 +32,11 @@
 		"vite": "^8.0.16"
 	},
 	"dependencies": {
+		"@fontsource/inter": "^5.2.8",
 		"@fontsource/manrope": "^5.2.8",
 		"@fontsource/playfair-display": "^5.2.8",
-		"@fontsource/poppins": "^5.2.7"
+		"@fontsource/plus-jakarta-sans": "^5.2.8",
+		"@fontsource/poppins": "^5.2.7",
+		"cheerio": "^1.2.0"
 	}
 }
