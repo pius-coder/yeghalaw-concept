@@ -1,21 +1,44 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
-
 @theme {
-	--font-sans: 'Manrope', sans-serif;
-	--font-heading: 'Poppins', sans-serif;
+	--font-sans: 'Inter', sans-serif;
+	--font-heading: 'Plus Jakarta Sans', sans-serif;
 	--font-serif: 'Playfair Display', serif;
-}
 
-@import '@fontsource/poppins/400.css';
-@import '@fontsource/poppins/500.css';
-@import '@fontsource/poppins/600.css';
-@import '@fontsource/poppins/700.css';
-@import '@fontsource/manrope/400.css';
-@import '@fontsource/manrope/500.css';
-@import '@fontsource/manrope/600.css';
-@import '@fontsource/manrope/700.css';
+	--color-primary: #0f766e;
+	--color-primary-deep: #134e4a;
+	--color-primary-bright: #14b8a6;
+
+	--color-secondary: #ffd7a8;
+
+	/* Default surfaces */
+	--color-clean: #ffffff;
+	--color-bg: #ffffff;
+	--color-white: #ffffff;
+
+	--color-text: #111827;
+	--color-muted: #e5e7eb;
+
+	--color-accent: #ff5a5f;
+	--color-jade: #0d9488;
+
+	/* Only for small decorative surfaces */
+	--color-mint-soft: #e7f5ef;
+	--color-mint-border: #cce9de;
+}
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/400-italic.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/700-italic.css';
+@import '@fontsource/inter/900.css';
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+@import '@fontsource/plus-jakarta-sans/800.css';
 @import '@fontsource/playfair-display/400.css';
 @import '@fontsource/playfair-display/400-italic.css';
 @import '@fontsource/playfair-display/700.css';
@@ -37,4 +60,110 @@ h6 {
 
 h1 {
 	font-family: var(--font-serif);
+}
+
+/* ── Transition Utilities ── */
+
+@utility transition-base {
+	transition-property: color, background-color, border-color, box-shadow, opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 200ms;
+}
+
+@utility transition-fast {
+	transition-property: color, background-color, border-color, box-shadow, opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 100ms;
+}
+
+@utility transition-slow {
+	transition-property: color, background-color, border-color, box-shadow, opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 350ms;
+}
+
+@utility transition-transform {
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 200ms;
+}
+
+@utility transition-all {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 200ms;
+}
+
+/* ── Fade In ── */
+
+@utility fade-in {
+	animation: fadeIn 200ms ease-out forwards;
+}
+
+@utility fade-in-slow {
+	animation: fadeIn 350ms ease-out forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ── Slide Down ── */
+
+@utility slide-down {
+	animation: slideDown 200ms ease-out forwards;
+}
+
+@utility slide-down-slow {
+	animation: slideDown 350ms ease-out forwards;
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ── Slide Up ── */
+
+@utility slide-up {
+	animation: slideUp 200ms ease-out forwards;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ── Scale In ── */
+
+@utility scale-in {
+	animation: scaleIn 200ms ease-out forwards;
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
