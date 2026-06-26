@@ -1,8 +1,10 @@
 import type { Handle } from '@sveltejs/kit';
 
 export const handle: Handle = async ({ event, resolve }) => {
-  const match = event.url.pathname.match(/^\/(en|fr)(\/|$)/);
-  const lang = match?.[1] || 'en';
+  let lang = 'en';
+  try {
+    lang = event.url.searchParams.get('lang') || 'en';
+  } catch {}
 
   return resolve(event, {
     transformPageChunk: ({ html }) =>

@@ -7,9 +7,9 @@
     const current = getLocale();
     const next = current === 'en' ? 'fr' : 'en';
     setLocale(next);
-    const rest = page.url.pathname.replace(/^\/(en|fr)(\/|$)/, '/');
-    const newPath = next === 'en' ? rest || '/' : `/${next}${rest}`;
-    goto(newPath);
+    const params = new URLSearchParams(page.url.searchParams);
+    params.set('lang', next);
+    goto(`${page.url.pathname}?${params.toString()}`);
   }
 </script>
 

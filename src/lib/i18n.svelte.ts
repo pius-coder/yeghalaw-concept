@@ -30,8 +30,3 @@ export function t(path: string): string {
   }
   return typeof value === 'string' ? value : path;
 }
-
-export function localeHref(path: string): string {
-  const prefix = current === 'en' ? '' : `/${current}`;
-  return `${prefix}${path}`;
-}
