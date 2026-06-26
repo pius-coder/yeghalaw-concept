@@ -2,16 +2,11 @@
 	import FaqItem from '$lib/components/ui/FaqItem.svelte';
 	import ButtonMain from '$lib/components/ui/ButtonMain.svelte';
 	import CloudinaryImage from '$lib/components/ui/CloudinaryImage.svelte';
+	import { t } from '$lib/i18n.svelte';
 
 	let openIndex = $state(0);
 
-	const faqs = [
-		{ question: 'What legal services does YEGHA LAW FIRM offer?', answer: 'We offer comprehensive legal services including Corporate Law, Real Estate, Immigration Law, Litigation, Labour Law, Intellectual Property, International Human Rights, and Family & Succession Law.' },
-		{ question: 'Is YEGHA LAW FIRM bilingual?', answer: 'Yes. We provide legal services in both English and French, ensuring effective communication and representation for clients across Cameroon\'s bilingual regions.' },
-		{ question: 'Where is YEGHA LAW FIRM located?', answer: 'Our office is located at Mosquée Monter-Escalier, Immeuble Rose, 2ème étage, Yaoundé, Cameroon.' },
-		{ question: 'How can I schedule a consultation?', answer: 'You can reach us by phone at +237 697 383 421 or +237 679 300 632, or email us at yeghalawfirm@gmail.com. We are available Monday to Friday from 8:00 to 18:00.' },
-		{ question: 'What types of clients do you work with?', answer: 'We work with individuals, startups, SMEs, and large corporations across various sectors, both within Cameroon and internationally.' }
-	];
+	const faqKeys = [0, 1, 2, 3, 4];
 
 	function toggle(index: number) {
 		openIndex = openIndex === index ? -1 : index;
@@ -22,10 +17,10 @@
 	<div class="flex w-full max-w-[1200px] flex-col items-center gap-[54px]">
 		<div class="flex w-full max-w-[840px] flex-col items-center gap-6 max-md:gap-4">
 			<h2 class="w-full text-center font-serif text-[44px] font-light leading-[1.1] tracking-[-0.04em] text-text max-lg:text-[38px]">
-				Frequently Asked Questions
+				{t('faq.title')}
 			</h2>
 			<p class="w-full max-w-[720px] text-center font-sans text-lg font-normal leading-[1.5] tracking-[-0.02em] text-text/85">
-				Have questions? Find answers to the most common inquiries about our services and practice.
+				{t('faq.subtitle')}
 			</p>
 		</div>
 		<div class="flex w-full flex-row items-stretch gap-11 max-md:flex-col">
@@ -45,21 +40,21 @@
 				</div>
 				<div class="relative z-[2] flex flex-col justify-end p-8">
 					<h2 class="font-serif text-[28px] font-light leading-[1.2] tracking-[-0.03em] text-white max-md:text-[22px]">
-						&ldquo;Our main goal is to provide expert legal solutions that protect our clients&rsquo; rights and advance their interests.&rdquo;
+						{t('faq.quote')}
 					</h2>
 				</div>
 			</div>
 			<div class="flex flex-1 flex-col gap-5 max-md:w-full">
-				{#each faqs as faq, i}
+				{#each faqKeys as i}
 					<div onclick={() => toggle(i)} role="button" tabindex="0" onkeydown={(e) => e.key === 'Enter' && toggle(i)}>
-						<FaqItem question={faq.question} answer={faq.answer} isOpen={openIndex === i} />
+						<FaqItem question={t(`faq.items.${i}.question`)} answer={t(`faq.items.${i}.answer`)} isOpen={openIndex === i} />
 					</div>
 				{/each}
 			</div>
 		</div>
 		<div class="flex w-full flex-wrap items-center gap-4">
-			<ButtonMain text="Contact Us" variant="primary" href="/contact#contact" icon />
-			<ButtonMain text="Our Services" variant="secondary" href="#services" icon />
+			<ButtonMain text={t('faq.contactUs')} variant="primary" href="/contact#contact" icon />
+			<ButtonMain text={t('faq.ourServices')} variant="secondary" href="#services" icon />
 		</div>
 	</div>
 </section>

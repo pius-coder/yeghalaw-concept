@@ -3,6 +3,7 @@
 	import CloudinaryImage from '$lib/components/ui/CloudinaryImage.svelte';
 	import SealCheck from 'phosphor-svelte/lib/SealCheck';
 	import Star from 'phosphor-svelte/lib/Star';
+	import { t } from '$lib/i18n.svelte';
 </script>
 
 <section id="hero" class="flex flex-col items-center justify-start gap-[10px] overflow-hidden bg-white px-[50px] pb-[100px] pt-5 scroll-mt-[100px] max-md:px-[18px] max-md:pb-20">
@@ -18,20 +19,20 @@
 				<div class="z-[2] flex flex-1 flex-col gap-6">
 				<div class="inline-flex items-center gap-2 rounded-[17px] border border-[#edf8f4] bg-white px-4 py-1.5 shadow-[0_8px_24px_0_rgba(173,173,173,0.08)]">
 					<SealCheck size={22} weight="duotone" color="rgba(0,0,0,0.85)" />
-					<span class="font-heading text-sm font-medium uppercase tracking-[0.8px] text-text">EXPERT LEGAL SOLUTIONS</span>
+					<span class="font-heading text-sm font-medium uppercase tracking-[0.8px] text-text">{t('hero.badge')}</span>
 				</div>
 
 				<h1 class="font-serif text-[70px] font-light leading-[1] tracking-[-0.04em] text-text max-lg:text-[3.5rem] max-md:text-[3rem]">
-					Expert Legal<br />Solutions in Cameroon
+					{t('hero.title')}
 				</h1>
 
 				<p class="font-sans text-lg leading-[1.5] tracking-[-0.02em] text-text/60">
-					Providing bilingual legal services with a strong commitment to excellence in corporate and real estate sectors across the economy.
+					{t('hero.subtitle')}
 				</p>
 
 				<div class="flex flex-wrap gap-4">
-					<ButtonMain text="Contact Us" variant="primary" href="/contact#contact" icon />
-					<ButtonMain text="Our Services" variant="secondary" href="#services" icon />
+					<ButtonMain text={t('hero.contactUs')} variant="primary" href="/contact#contact" icon />
+					<ButtonMain text={t('hero.ourServices')} variant="secondary" href="#services" icon />
 				</div>
 
 				<div class="h-[2px] w-[406px] bg-black/10 max-md:w-full"></div>
@@ -43,7 +44,7 @@
 						{/each}
 					</div>
 					<div class="h-6 w-[2px] bg-black/10"></div>
-					<span class="font-sans text-lg leading-[1.5] text-text/60">Trusted by clients across Cameroon</span>
+					<span class="font-sans text-lg leading-[1.5] text-text/60">{t('hero.trustedBy')}</span>
 				</div>
 				</div>
 			</div>
@@ -55,8 +56,8 @@
 							src="/images/yegha/team-terence.jpg"
 							alt="YEGHA LAW FIRM"
 							class="aspect-[2/3] w-full object-cover"
-							width="1024"
-							height="1536"
+							width={1024}
+							height={1536}
 						/>
 					</div>
 					<div class="flex-1 overflow-hidden rounded-[16px]">
@@ -64,8 +65,8 @@
 							src="/images/yegha/corporate-law.jpg"
 							alt="Legal expertise"
 							class="aspect-[2/3] w-full object-cover"
-							width="1024"
-							height="1536"
+							width={1024}
+							height={1536}
 						/>
 					</div>
 				</div>
@@ -88,7 +89,7 @@
 						</div>
 					</div>
 					<div class="font-sans text-lg leading-[1.5] text-text/60">
-						Join <span class="font-semibold text-text" style="font-size:16px;line-height:1.6">1,000+</span><span> other awesome clients</span>
+						{t('hero.join')} <span class="font-semibold text-text" style="font-size:16px;line-height:1.6">1,000+</span><span> {t('hero.otherClients')}</span>
 					</div>
 				</div>
 			</div>

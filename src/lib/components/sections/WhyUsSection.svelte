@@ -1,13 +1,14 @@
 <script lang="ts">
 	import WhyUsCard from '$lib/components/ui/WhyUsCard.svelte';
+	import { t } from '$lib/i18n.svelte';
 	import Translate from 'phosphor-svelte/lib/Translate';
 	import MapPin from 'phosphor-svelte/lib/MapPin';
 	import Heart from 'phosphor-svelte/lib/Heart';
 
 	const cards = [
-		{ title: 'Bilingual Advantage', description: 'We provide expert legal services in both English and French, ensuring clear communication and effective representation across Cameroon\'s bilingual legal landscape.', icon: Translate },
-		{ title: 'Local Expertise', description: 'Deep understanding of Cameroon\'s legal system and business environment allows us to offer informed, strategic advice tailored to local realities.', icon: MapPin },
-		{ title: 'Client-Centric Approach', description: 'Your goals are our priority. We take the time to understand your unique situation and develop personalized legal strategies that deliver results.', icon: Heart }
+		{ titleKey: 'why.cards.bilingual.title', descKey: 'why.cards.bilingual.description', icon: Translate },
+		{ titleKey: 'why.cards.local.title', descKey: 'why.cards.local.description', icon: MapPin },
+		{ titleKey: 'why.cards.client.title', descKey: 'why.cards.client.description', icon: Heart }
 	];
 </script>
 
@@ -15,10 +16,10 @@
 	<div class="flex w-full max-w-[1200px] flex-col items-center gap-[54px] max-md:gap-8">
 		<div class="flex w-full max-w-[840px] flex-col items-center gap-6 max-md:gap-4">
 			<h2 class="w-full text-center font-serif text-[44px] font-light leading-[1.1] tracking-[-0.04em] text-text max-lg:text-[38px]">
-				Why Choose YEGHA LAW FIRM
+				{t('why.title')}
 			</h2>
 			<p class="w-full max-w-[640px] text-center font-sans text-lg font-normal leading-[1.5] tracking-[-0.02em] text-text/85">
-				We combine legal excellence with a deep commitment to our clients&rsquo; success.
+				{t('why.subtitle')}
 			</p>
 		</div>
 		<div class="flex w-full flex-col items-center gap-4 overflow-hidden max-md:gap-0">
@@ -26,7 +27,7 @@
 				<div class="flex w-full flex-row gap-5 max-md:flex-col max-md:items-center">
 					{#each cards as card}
 						<div class="flex-1 shrink-0 max-md:w-full">
-							<WhyUsCard title={card.title} description={card.description}>
+							<WhyUsCard title={t(card.titleKey)} description={t(card.descKey)}>
 								<card.icon size={20} color="#0d9488" />
 							</WhyUsCard>
 						</div>

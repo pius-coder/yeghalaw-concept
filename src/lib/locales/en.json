@@ -1,0 +1,243 @@
+{
+  "locale": "en",
+  "banner": {
+    "desktop": "UNOFFICIAL REDESIGN CONCEPT — Private demonstration only. Not the official website of YEGHA LAW FIRM.",
+    "mobile": "Unofficial redesign concept — Private demonstration only."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "team": "Team",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "emailAria": "Email (disabled demo)",
+    "whatsappAria": "WhatsApp (disabled demo)",
+    "facebookAria": "Facebook (disabled demo)"
+  },
+  "hero": {
+    "badge": "EXPERT LEGAL SOLUTIONS",
+    "title": "Expert Legal\nSolutions in Cameroon",
+    "subtitle": "Providing bilingual legal services with a strong commitment to excellence in corporate and real estate sectors across the economy.",
+    "contactUs": "Contact Us",
+    "ourServices": "Our Services",
+    "trustedBy": "Trusted by clients across Cameroon",
+    "join": "Join",
+    "otherClients": "other awesome clients"
+  },
+  "trusted": {
+    "title": "Trusted by Clients Across Cameroon",
+    "corporate": "Corporate",
+    "realEstate": "Real Estate",
+    "immigration": "Immigration",
+    "litigation": "Litigation",
+    "familyLaw": "Family Law"
+  },
+  "services": {
+    "title": "Comprehensive Legal Solutions",
+    "subtitle": "At YEGHA LAW FIRM, we specialize in a diverse range of legal areas to meet our clients' unique needs and expectations.",
+    "items": {
+      "corporate": {
+        "title": "Corporate Law",
+        "description": "Expert guidance for businesses of all sizes, offering tailored legal solutions for company formation, compliance, and governance. We ensure that our clients navigate the complexities of corporate regulations efficiently while protecting their interests."
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "description": "Comprehensive assistance in property transactions, leasing agreements, and regulatory compliance. We strive to protect our clients' investments and ensure smooth dealings in the real estate market."
+      },
+      "immigration": {
+        "title": "Immigration Law",
+        "description": "Expert advice and representation for individuals and businesses seeking visas, work permits, and residency in Cameroon. We simplify the often-complex immigration process to help our clients achieve their goals."
+      },
+      "litigation": {
+        "title": "Litigation",
+        "description": "Robust litigation services to protect our clients' rights in disputes. Our skilled attorneys represent clients in various legal matters, from contract disputes to arbitration, ensuring effective resolution strategies."
+      },
+      "labour": {
+        "title": "Labour Law",
+        "description": "Labour Law governs the relationship between employers, employees, and labor organizations. We provide comprehensive counsel on workers' rights, workplace conditions, employment contracts, wages, and dispute resolution."
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "description": "IP law grants creators and inventors exclusive rights over their creations, providing protection and incentivizing innovation. We help you protect your trademarks, patents, copyrights, and trade secrets."
+      },
+      "humanRights": {
+        "title": "International Human Rights",
+        "description": "Our International Human Rights as a Service (IHRaaS) approach encompasses advocacy, education, consultation, and legal support to promote and protect human rights on a global scale."
+      },
+      "family": {
+        "title": "Family & Succession Law",
+        "description": "Family and Succession Law deals with family relationships, inheritance, and the transfer of assets upon death. We protect family rights and ensure fair distribution of property."
+      }
+    }
+  },
+  "why": {
+    "title": "Why Choose YEGHA LAW FIRM",
+    "subtitle": "We combine legal excellence with a deep commitment to our clients' success.",
+    "cards": {
+      "bilingual": {
+        "title": "Bilingual Advantage",
+        "description": "We provide expert legal services in both English and French, ensuring clear communication and effective representation across Cameroon's bilingual legal landscape."
+      },
+      "local": {
+        "title": "Local Expertise",
+        "description": "Deep understanding of Cameroon's legal system and business environment allows us to offer informed, strategic advice tailored to local realities."
+      },
+      "client": {
+        "title": "Client-Centric Approach",
+        "description": "Your goals are our priority. We take the time to understand your unique situation and develop personalized legal strategies that deliver results."
+      }
+    }
+  },
+  "stats": {
+    "clientsServed": "Clients served",
+    "yearsExperience": "Years of legal experience",
+    "practiceAreas": "Practice areas"
+  },
+  "process": {
+    "title": "About YEGHA LAW FIRM",
+    "subtitle": "YEGHA LAW FIRM is a full-service bilingual law firm based in Yaoundé, Cameroon. We are dedicated to delivering high-quality legal services across multiple practice areas, combining deep local knowledge with international standards of excellence.",
+    "contactUs": "Contact Us",
+    "ourServices": "Our Services",
+    "trustedBy": "Trusted by clients across Cameroon",
+    "steps": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "To provide exceptional legal services that protect our clients' rights and interests while upholding the highest standards of professional ethics and integrity."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the leading law firm in Cameroon, recognized for our bilingual expertise, innovative legal solutions, and unwavering commitment to client success."
+      },
+      "values": {
+        "title": "Our Values",
+        "description": "Integrity, excellence, bilingualism, client focus, and social responsibility guide every aspect of our practice and client relationships."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Recent Work",
+    "subtitle": "We take pride in delivering exceptional legal services. Here are some highlights from our recent cases and client engagements.",
+    "items": {
+      "corporate": "Corporate Law Success",
+      "realEstate": "Real Estate Transaction",
+      "immigration": "Immigration Case",
+      "litigation": "Litigation Victory"
+    }
+  },
+  "badges": {
+    "clients": "Worked With 100+ Clients",
+    "bilingual": "Bilingual Legal Experts",
+    "trusted": "Trusted Advisors",
+    "results": "Proven Results"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Have questions? Find answers to the most common inquiries about our services and practice.",
+    "quote": "\"Our main goal is to provide expert legal solutions that protect our clients' rights and advance their interests.\"",
+    "contactUs": "Contact Us",
+    "ourServices": "Our Services",
+    "items": [
+      {
+        "question": "What legal services does YEGHA LAW FIRM offer?",
+        "answer": "We offer comprehensive legal services including Corporate Law, Real Estate, Immigration Law, Litigation, Labour Law, Intellectual Property, International Human Rights, and Family & Succession Law."
+      },
+      {
+        "question": "Is YEGHA LAW FIRM bilingual?",
+        "answer": "Yes. We provide legal services in both English and French, ensuring effective communication and representation for clients across Cameroon's bilingual regions."
+      },
+      {
+        "question": "Where is YEGHA LAW FIRM located?",
+        "answer": "Our office is located at Mosquée Monter-Escalier, Immeuble Rose, 2ème étage, Yaoundé, Cameroon."
+      },
+      {
+        "question": "How can I schedule a consultation?",
+        "answer": "You can reach us by phone at +237 697 383 421 or +237 679 300 632, or email us at yeghalawfirm@gmail.com. We are available Monday to Friday from 8:00 to 18:00."
+      },
+      {
+        "question": "What types of clients do you work with?",
+        "answer": "We work with individuals, startups, SMEs, and large corporations across various sectors, both within Cameroon and internationally."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Get Expert Legal Help",
+    "subtitle": "Ready to discuss your legal needs? Contact YEGHA LAW FIRM today for a consultation.",
+    "contactUs": "Contact Us (demo disabled)",
+    "ourServices": "Our Services",
+    "disclaimer": "Demonstration only. This form is disabled and no information will be transmitted, stored or processed."
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "subtitle": "Our team of dedicated legal professionals brings diverse expertise and a shared commitment to excellence.",
+    "members": {
+      "terence": { "name": "Terence Yegba", "title": "Founder & Managing Partner" },
+      "laura": { "name": "Laura Ngo", "title": "Senior Associate" },
+      "ndakor": { "name": "Ndakor Nfor", "title": "Associate Attorney" },
+      "eyea": { "name": "Eyea Eyong", "title": "Junior Associate" },
+      "mebdoua": { "name": "Mebdou'a Etienne", "title": "Legal Assistant" }
+    }
+  },
+  "footer": {
+    "emailDemo": "(demo)",
+    "phoneDemo": "(demo)",
+    "home": "Home",
+    "services": "Services",
+    "contactUs": "Contact Us (demo disabled)",
+    "about": "About",
+    "team": "Team",
+    "copyright": "© 2025 YEGHA LAW FIRM",
+    "rights": "All Rights Reserved"
+  },
+  "footerSection": {
+    "emailDemo": "(inactive demo link)",
+    "phoneDemo": "(inactive demo link)",
+    "tagline": "Expert legal solutions in Cameroon. Bilingual. Trusted. Client-focused.",
+    "home": "Home",
+    "services": "Services",
+    "contactUs": "Contact Us",
+    "about": "About",
+    "address": "Mosquée Monter-Escalier, Immeuble Rose, 2ème étage, Yaoundé",
+    "hours": "Mon–Fri 8:00–18:00 | Sat–Sun Closed",
+    "copyright": "© 2025 YEGHA LAW FIRM",
+    "rights": "All Rights Reserved",
+    "legalNotice": {
+      "title": "Important Notice",
+      "english": "This website is an independent and unofficial redesign concept prepared solely to demonstrate possible improvements to the online presentation of YEGHA LAW FIRM. This concept has not been commissioned, approved, endorsed or published by YEGHA LAW FIRM. It does not constitute the firm's official website and must not be interpreted as a legal service, professional communication or representation made on behalf of the firm. All names, trademarks, logos, photographs, biographies and other identifying materials relating to YEGHA LAW FIRM remain the property of their respective owners. Their limited appearance in this private demonstration is solely intended to identify the organisation for which the redesign proposal was prepared. No legal services are offered through this demonstration. All forms, telephone links, email links, appointment features and payment functions are disabled. For official information or legal assistance, please use the contact details published through YEGHA LAW FIRM's official communication channels.",
+      "french": "Ce site constitue un concept indépendant et non officiel de refonte, préparé uniquement afin d'illustrer des améliorations possibles de la présentation en ligne de YEGHA LAW FIRM. Cette maquette n'a pas été commandée, approuvée, validée ou publiée par YEGHA LAW FIRM. Elle ne constitue pas le site officiel du cabinet et ne doit pas être interprétée comme une offre de services juridiques, une communication professionnelle ou une représentation effectuée au nom du cabinet. Les noms, marques, logos, photographies, biographies et autres éléments permettant d'identifier YEGHA LAW FIRM demeurent la propriété de leurs titulaires respectifs. Leur présence limitée dans cette démonstration privée sert uniquement à identifier l'organisation à laquelle la proposition de refonte est destinée. Aucun service juridique n'est proposé à travers cette démonstration. Les formulaires, appels téléphoniques, liens électroniques, prises de rendez-vous et fonctions de paiement sont désactivés. Pour toute information officielle ou demande d'assistance juridique, veuillez utiliser les canaux de communication officiels de YEGHA LAW FIRM.",
+      "englishLabel": "English:",
+      "frenchLabel": "Français :"
+    }
+  },
+  "blog": {
+    "title": "Our Blog",
+    "subtitle": "Insights That Drive Growth",
+    "metaTitle": "Blog — Archio",
+    "metaDescription": "Insights, resources, and industry perspectives",
+    "posts": {
+      "goodDesign": {
+        "title": "Why Good Design is Good Business",
+        "description": "Good design goes beyond looks—it builds trust, strengthens branding, and drives growth."
+      },
+      "noCode": {
+        "title": "The Rise of No-Code",
+        "description": "No-code platforms are transforming how businesses build. Learn how no-code saves time, reduces costs, and fuels innovation."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach out for consultancy inquiries.",
+    "metaTitle": "Contact — Unofficial Redesign Concept for YEGHA LAW FIRM",
+    "metaDescription": "Private redesign demonstration — Contact page disabled.",
+    "demoNotice": "<strong>Demonstration only.</strong> This page is part of an unofficial redesign concept. All contact links are disabled. No information will be transmitted, stored or processed.",
+    "emailLabel": "yeghalawfirm@gmail.com (inactive demo link)",
+    "demoFootnote": "Inactive demonstration link — Not an official contact channel."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "This is a placeholder privacy policy page for the Archio template.",
+    "metaTitle": "Privacy — Archio",
+    "metaDescription": "Privacy Policy"
+  }
+}
