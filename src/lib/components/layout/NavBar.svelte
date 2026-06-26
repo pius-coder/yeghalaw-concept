@@ -1,6 +1,7 @@
 <script lang="ts">
 	import NavLink from '$lib/components/ui/NavLink.svelte';
 	import ButtonMain from '$lib/components/ui/ButtonMain.svelte';
+	import { base } from '$app/paths';
 
 	let mobileOpen = $state(false);
 
@@ -29,7 +30,7 @@
 <!-- Top Bar -->
 <div class="fixed top-[36px] left-0 right-0 z-50 flex items-center justify-between bg-white px-5 py-3 md:px-8 lg:px-12">
 	<a href="#hero" class="flex items-center" aria-label="YEGHA LAW FIRM Home">
-		<img src="/images/yegha/logo.jpg" alt="YEGHA LAW FIRM" class="h-10 w-auto" />
+		<img src={base + '/images/yegha/logo.jpg'} alt="YEGHA LAW FIRM" class="h-10 w-auto" />
 	</a>
 
 	<div class="flex items-center gap-6">
