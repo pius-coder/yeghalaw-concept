@@ -25,7 +25,8 @@
 {#if href}
 	<a
 		{href}
-		class="inline-flex items-center gap-2 rounded-[10px] px-5 py-3 font-heading text-xs transition-base {variant === 'primary'
+		class="inline-flex items-center gap-2 rounded-[10px] px-5 py-3 font-heading text-xs transition-base {variant ===
+		'primary'
 			? 'bg-[linear-gradient(110deg,#134e4a_0%,#0f766e_55%,#14b8a6_100%)] text-white hover:brightness-110'
 			: variant === 'secondary'
 				? 'border border-[#efb56f] bg-[#ffd7a8] text-[#3b1d08] hover:bg-[#ffc982]'
@@ -48,7 +49,8 @@
 	</a>
 {:else}
 	<button
-		class="inline-flex items-center gap-2 rounded-[10px] px-5 py-3 font-heading text-xs transition-base {variant === 'primary'
+		class="inline-flex items-center gap-2 rounded-[10px] px-5 py-3 font-heading text-xs transition-base {variant ===
+		'primary'
 			? 'bg-[linear-gradient(110deg,#134e4a_0%,#0f766e_55%,#14b8a6_100%)] text-white hover:brightness-110'
 			: variant === 'secondary'
 				? 'border border-[#efb56f] bg-[#ffd7a8] text-[#3b1d08] hover:bg-[#ffc982]'

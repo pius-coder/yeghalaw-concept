@@ -5,5 +5,41 @@ yarn.lock
 bun.lock
 bun.lockb
 
+# Dependencies
+node_modules
+
+# Build output
+.svelte-kit
+.build
+build
+.wrangler
+.output
+
+# CLI output
+.claude
+
+# IDE settings
+.vscode
+
+# Skills / config
+.opencode
+
+# Docs / research
+docs
+
+# Scripts
+scripts
+
+# Archival
+*.html
+*.htm
+
+# Locales - JSON data files
+src/lib/locales/*.json
+
+# Documentation
+src/lib/COMPONENT_RULES.md
+
 # Miscellaneous
 /static/
+AGENTS.md

@@ -18,14 +18,21 @@
 		<p class="flex-1 font-sans text-[15px] font-normal leading-[150%] text-text">{question}</p>
 		<div class="shrink-0 transition-transform duration-300" class:rotate-180={isOpen}>
 			<svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor">
-				<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
+				<path
+					d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+				/>
 			</svg>
 		</div>
 	</div>
 	{#if isOpen}
 		<div class="pt-4">
-			<p class="font-sans text-[15px] font-normal leading-[160%] tracking-[-0.02em] text-text/85">{answer}</p>
+			<p class="font-sans text-[15px] font-normal leading-[160%] tracking-[-0.02em] text-text/85">
+				{answer}
+			</p>
 		</div>
 	{/if}
-	<div class="pointer-events-none absolute inset-0 rounded-[10px]" style="background:radial-gradient(50% 50% at 7.2% 6.1%, rgba(184,199,217,0.5) 0%, rgba(4,7,13,0) 100%);opacity:0.1"></div>
+	<div
+		class="pointer-events-none absolute inset-0 rounded-[10px]"
+		style="background:radial-gradient(50% 50% at 7.2% 6.1%, rgba(184,199,217,0.5) 0%, rgba(4,7,13,0) 100%);opacity:0.1"
+	></div>
 </div>
