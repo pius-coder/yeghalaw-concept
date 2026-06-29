@@ -2,6 +2,7 @@
 	import ServiceCard from '$lib/components/ui/ServiceCard.svelte';
 	import { cloudinary } from '$lib/utils/cloudinary';
 	import { t } from '$lib/i18n.svelte';
+	import type { ServiceItem } from '$lib/cms/types';
 	import Building from 'phosphor-svelte/lib/Building';
 	import House from 'phosphor-svelte/lib/House';
 	import IdentificationCard from 'phosphor-svelte/lib/IdentificationCard';
@@ -11,7 +12,25 @@
 	import GlobeHemisphereWest from 'phosphor-svelte/lib/GlobeHemisphereWest';
 	import UsersThree from 'phosphor-svelte/lib/UsersThree';
 
-	const services = [
+	let {
+		items,
+		eyebrow,
+		title,
+		description
+	}: { items?: ServiceItem[]; eyebrow?: string; title?: string; description?: string } = $props();
+
+	const iconMap: Record<string, typeof Building> = {
+		building: Building,
+		house: House,
+		'identification-card': IdentificationCard,
+		scales: Scales,
+		briefcase: Briefcase,
+		lightbulb: Lightbulb,
+		'globe-hemisphere-west': GlobeHemisphereWest,
+		'users-three': UsersThree
+	};
+
+	const fallbackServices = [
 		{
 			titleKey: 'services.items.corporate.title',
 			descKey: 'services.items.corporate.description',
@@ -75,20 +94,43 @@
 	<div class="mx-auto flex max-w-[1200px] flex-col gap-11">
 		<div class="mx-auto flex w-full max-w-[840px] flex-col items-center gap-6 px-8 text-center">
 			<h2 class="font-serif text-[38px] font-light leading-[1.1] tracking-[-0.04em] text-text">
-				{t('services.title')}
+				{title ?? t('services.title')}
 			</h2>
 			<p class="font-sans text-lg font-normal leading-[1.5] tracking-[-0.02em] text-text/70">
-				{t('services.subtitle')}
+				{description ?? t('services.subtitle')}
 			</p>
 		</div>
 		<div class="flex flex-wrap justify-center gap-6">
-			{#each services as s}
-				<div class="min-w-[400px] flex-1">
-					<ServiceCard title={t(s.titleKey)} description={t(s.descKey)} landscapeSrc={s.landscapeSrc} portraitSrc={s.portraitSrc}>
-						<s.icon size={32} color="#0d9488" />
-					</ServiceCard>
-				</div>
-			{/each}
+			{#if items && items.length > 0}
+				{#each items as item}
+					{#if item.is_visible !== false}
+						{@const IconComp = iconMap[item.icon?.toLowerCase()?.replace(/\s+/g, '-')] || Building}
+						<div class="min-w-[400px] flex-1">
+							<ServiceCard
+								title={item.title}
+								description={item.short_description}
+								landscapeSrc={item.image?.filename ? cloudinary(item.image.filename) : undefined}
+								portraitSrc={item.image?.filename ? cloudinary(item.image.filename) : undefined}
+							>
+								<IconComp size={32} color="#0d9488" />
+							</ServiceCard>
+						</div>
+					{/if}
+				{/each}
+			{:else}
+				{#each fallbackServices as s}
+					<div class="min-w-[400px] flex-1">
+						<ServiceCard
+							title={t(s.titleKey)}
+							description={t(s.descKey)}
+							landscapeSrc={s.landscapeSrc}
+							portraitSrc={s.portraitSrc}
+						>
+							<s.icon size={32} color="#0d9488" />
+						</ServiceCard>
+					</div>
+				{/each}
+			{/if}
 		</div>
 	</div>
 </section>

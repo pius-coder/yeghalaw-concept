@@ -1,17 +1,16 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
+		adapter: adapter(),
 		paths: {
 			base: process.env.BASE_PATH || ''
 		},
 		prerender: {
-			handleMissingId: 'ignore',
-			handleHttpError: 'ignore'
+			entries: ['/', '/en/', '/fr/', '/en/blog', '/fr/blog', '/contact', '/privacy'],
+			handleMissingId: 'warn',
+			handleHttpError: 'warn'
 		}
 	}
 };
