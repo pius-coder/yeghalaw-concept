@@ -20,7 +20,9 @@ A reusable template for reverse-engineering any website into a clean, modern Sve
 - **UI:** Tailwind CSS v4 (CSS-first config, `@theme` tokens, `@import "tailwindcss"`)
 - **Icons:** Phosphor Svelte (import individual icons from `phosphor-svelte/lib/IconName`)
 - **Styling:** Tailwind CSS v4 with CSS custom property design tokens
-- **Deployment:** Adapter-auto (Vercel, Cloudflare Pages, Netlify, etc.)
+- **CMS:** Decap CMS (Git-based, files in `src/lib/content/`)
+- **Testing:** Vitest v4
+- **Deployment:** Cloudflare Pages (`@sveltejs/adapter-cloudflare`)
 
 ## Commands
 - `npm run dev` — Start dev server (Vite)
@@ -28,6 +30,7 @@ A reusable template for reverse-engineering any website into a clean, modern Sve
 - `npm run check` — Type-check (`svelte-check --tsconfig ./tsconfig.json`)
 - `npm run lint` — Prettier format check
 - `npm run format` — Prettier auto-format
+- `npm run test` — Run vitest tests
 
 ## Code Style
 - TypeScript strict mode, no `any`
@@ -49,27 +52,37 @@ src/
   app.d.ts              # Global type declarations
   routes/               # SvelteKit routes (file-based)
     +layout.svelte      # Root layout
-    +layout.css         # Root layout CSS (Tailwind imports, @theme tokens)
-    +page.svelte        # Index page
-    +page.ts            # Index page load function
+    +page.svelte        # Index page (redirects to /en/)
+    [lang=locale]/      # Multilingual routes (en/fr)
+      +layout.svelte    # Locale-aware layout
+      +page.svelte      # CMS-driven home page with all sections
+      +page.server.ts   # Loads CMS data (home, settings)
+      blog/             # Dynamic blog listing + [slug] detail
+    api/
+      contact/+server.ts # Contact form POST endpoint
+    sitemap.xml/+server.ts # Dynamic multilingual sitemap
+    contact/
+    privacy/
   lib/
+    cms/                # CMS types (Legacy — kept for component compatibility)
+      types.ts          # TypeScript interfaces (HomePageContent, SiteSettings, Article, etc.)
+      fallback.ts       # Default content when CMS unavailable
+    content/            # Decap CMS content layer
+      types.ts          # Bilingual storage types
+      loaders.ts        # Content loader functions (getHomeContent, getSiteSettings, etc.)
+      home.json         # Home page content (bilingual)
+      settings.json     # Site settings (bilingual)
     components/
-      ui/               # Primitive components (buttons, badges, links)
-      layout/           # Layout components (NavBar, Footer, Header)
-      sections/         # Page sections (HeroSection, ServicesSection)
-      icons.tsx         # Wait — no, use Phosphor or extract SVGs as .svelte components
+      ui/               # Primitive components (buttons, badges, links, CloudinaryImage, etc.)
+      layout/           # Layout components (NavBar, Footer)
+      sections/         # Page sections (HeroSection, ServicesSection, FaqSection, etc.)
     utils/
-      cn.ts             # cn() utility for class merging (if needed)
-      index.ts          # Barrel exports (optional)
-types/                  # TypeScript interfaces (optional, can live in lib/)
+      cloudinary.ts     # Cloudinary URL builder + storyblokAssetUrl helper
+      contact-validation.ts # Contact form validation logic
+    i18n.svelte.ts      # Rune-based i18n with locale detection
+    locales/            # JSON translation files (en.json, fr.json)
 static/
-  images/               # Downloaded images from target site
-  videos/               # Downloaded videos from target site
-  seo/                  # Favicons, OG images, webmanifest
-docs/
-  research/             # Inspection output (design tokens, components, layout)
-  design-references/    # Screenshots and visual references
-scripts/                # Asset download scripts
+  robots.txt
 ```
 
 ## Component Rules
@@ -85,6 +98,7 @@ See `src/lib/COMPONENT_RULES.md` for detailed component conventions (in French �
 - SvelteKit file-based routing: `+page.svelte`, `+layout.svelte`, `+page.ts`, `+server.ts`
 - Run `npm run check` after any TypeScript changes to verify types
 - Run `npm run build` before declaring any clone complete
+- Run `npm run test` after adding/modifying test files
 
 ## Svelte 5 Quick Reference (runes mode)
 

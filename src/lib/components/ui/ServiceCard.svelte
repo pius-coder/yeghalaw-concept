@@ -25,13 +25,20 @@
 			{@render children()}
 		</IconBadge>
 		<h4 class="font-sans text-[24px] font-medium leading-[1.5] text-text">{title}</h4>
-		<p class="font-sans text-[15px] font-normal leading-[1.6] tracking-[-0.02em] text-text/85">{description}</p>
+		<p class="font-sans text-[15px] font-normal leading-[1.6] tracking-[-0.02em] text-text/85">
+			{description}
+		</p>
 	</div>
 	{#if landscapeSrc || portraitSrc}
 		<div class="flex flex-wrap gap-2.5">
 			{#if landscapeSrc}
 				<div class="min-w-[200px] flex-1 overflow-hidden rounded-[10px]">
-					<img src={landscapeSrc} alt="" class="aspect-[4/3] h-full w-full object-cover" loading="lazy" />
+					<img
+						src={landscapeSrc}
+						alt=""
+						class="aspect-[4/3] h-full w-full object-cover"
+						loading="lazy"
+					/>
 				</div>
 			{/if}
 			<!-- {#if portraitSrc}

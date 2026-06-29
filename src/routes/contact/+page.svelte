@@ -22,7 +22,9 @@
 			</p>
 		</div>
 
-		<span class="inline-block cursor-not-allowed rounded-full bg-primary/40 px-8 py-3 font-sans text-sm font-semibold text-white/50">
+		<span
+			class="inline-block cursor-not-allowed rounded-full bg-primary/40 px-8 py-3 font-sans text-sm font-semibold text-white/50"
+		>
 			{t('contact.emailLabel')}
 		</span>
 

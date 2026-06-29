@@ -1,0 +1,203 @@
+backend:
+  name: github
+  repo: pius-coder/yeghalaw-concept
+  branch: main
+  squash_merges: true
+  base_url: https://auth.yeghalawfirm.com
+  auth_endpoint: auth
+
+publish_mode: editorial_workflow
+
+locale: fr
+
+site_url: https://yeghalawfirm.com
+display_url: https://yeghalawfirm.com
+
+media_folder: static/uploads
+public_folder: /uploads
+
+editor:
+  preview: true
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: pages
+    label: Pages principales
+    files:
+      - name: home
+        label: Page d'accueil
+        file: src/lib/content/home.json
+        editor:
+          preview: true
+        fields:
+          - label: Bannière principale
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - label: Français
+                name: fr
+                widget: object
+                collapsed: false
+                fields:
+                  - { label: Petit titre, name: eyebrow, widget: string, hint: Texte affiché au-dessus du grand titre. }
+                  - { label: Grand titre, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+              - label: English
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Eyebrow, name: eyebrow, widget: string }
+                  - { label: Main title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+              - { label: Image principale, name: primary_image, widget: image, choose_url: false }
+              - label: Boutons
+                name: buttons
+                widget: object
+                fields:
+                  - { label: Texte bouton principal (FR), name: primary_button_label.fr, widget: string }
+                  - { label: Texte bouton principal (EN), name: primary_button_label.en, widget: string }
+                  - { label: Lien bouton principal, name: primary_button_link, widget: string }
+                  - { label: Texte bouton secondaire (FR), name: secondary_button_label.fr, widget: string }
+                  - { label: Texte bouton secondaire (EN), name: secondary_button_label.en, widget: string }
+                  - { label: Lien bouton secondaire, name: secondary_button_link, widget: string }
+
+      - name: settings
+        label: Paramètres du site
+        file: src/lib/content/settings.json
+        editor:
+          preview: false
+        fields:
+          - { label: Nom du cabinet, name: firm_name, widget: string }
+          - { label: Logo, name: logo, widget: image }
+          - { label: Email, name: email, widget: string }
+          - { label: Téléphone, name: phone_primary, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }
+          - { label: Adresse, name: address, widget: string }
+          - { label: Facebook URL, name: facebook_url, widget: string, required: false }
+          - { label: LinkedIn URL, name: linkedin_url, widget: string, required: false }
+          - { label: Instagram URL, name: instagram_url, widget: string, required: false }
+          - { label: Description footer (FR), name: footer_description.fr, widget: text }
+          - { label: Description footer (EN), name: footer_description.en, widget: text }
+          - { label: Copyright (FR), name: copyright.fr, widget: string }
+          - { label: Copyright (EN), name: copyright.en, widget: string }
+          - { label: Meta titre par défaut (FR), name: default_meta_title.fr, widget: string }
+          - { label: Meta titre par défaut (EN), name: default_meta_title.en, widget: string }
+          - { label: Meta description (FR), name: default_meta_description.fr, widget: text }
+          - { label: Meta description (EN), name: default_meta_description.en, widget: text }
+
+  - name: services
+    label: Services
+    label_singular: Service
+    files:
+      - name: services-list
+        label: Liste des services
+        file: src/lib/content/home.json
+        editor:
+          preview: false
+        fields:
+          - label: Services
+            name: services
+            widget: list
+            collapsed: true
+            summary: "{{title.fr}}"
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            fields:
+              - { label: Identifiant, name: id, widget: string, hint: Ne pas modifier après publication. }
+              - { label: Visible, name: is_visible, widget: boolean, default: true }
+              - { label: Icône, name: icon, widget: select, options: [{ label: Justice, value: scale }, { label: Entreprise, value: building }, { label: Immobilier, value: house }, { label: Immigration, value: passport }] }
+              - label: Français
+                name: title
+                widget: object
+                fields:
+                  - { label: Titre, name: fr, widget: string }
+                  - { label: Description courte, name: short_description.fr, widget: text }
+              - label: English
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Title, name: title.en, widget: string }
+                  - { label: Short description, name: short_description.en, widget: text }
+
+  - name: team
+    label: Équipe
+    label_singular: Membre
+    files:
+      - name: team-list
+        label: Membres de l'équipe
+        file: src/lib/content/home.json
+        editor:
+          preview: false
+        fields:
+          - label: Membres
+            name: team.members
+            widget: list
+            collapsed: true
+            summary: "{{name.fr}}"
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            fields:
+              - { label: Identifiant, name: id, widget: string }
+              - { label: Visible, name: is_visible, widget: boolean, default: true }
+              - { label: Photo, name: photo, widget: image }
+              - { label: LinkedIn URL, name: linkedin_url, widget: string, required: false }
+              - { label: Email, name: email, widget: string, required: false }
+              - label: Français
+                name: name
+                widget: object
+                fields:
+                  - { label: Nom, name: fr, widget: string }
+                  - { label: Poste, name: job_title.fr, widget: string }
+                  - { label: Bio, name: short_bio.fr, widget: text }
+              - label: English
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Name, name: name.en, widget: string }
+                  - { label: Job title, name: job_title.en, widget: string }
+                  - { label: Bio, name: short_bio.en, widget: text }
+
+  - name: faq
+    label: FAQ
+    label_singular: Question
+    files:
+      - name: faq-list
+        label: Questions fréquentes
+        file: src/lib/content/home.json
+        editor:
+          preview: false
+        fields:
+          - label: Questions
+            name: faq.items
+            widget: list
+            collapsed: true
+            summary: "{{question.fr}}"
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            fields:
+              - { label: Identifiant, name: id, widget: string }
+              - { label: Visible, name: is_visible, widget: boolean, default: true }
+              - label: Français
+                name: question
+                widget: object
+                fields:
+                  - { label: Question, name: fr, widget: string }
+                  - { label: Réponse, name: answer.fr, widget: text }
+              - label: English
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Question, name: question.en, widget: string }
+                  - { label: Answer, name: answer.en, widget: text }

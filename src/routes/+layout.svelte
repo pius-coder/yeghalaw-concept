@@ -1,19 +1,21 @@
 <script lang="ts">
-  import { page } from '$app/state';
-  import { setLocale } from '$lib/i18n.svelte';
-  import './layout.css';
+	import { page } from '$app/state';
+	import { setLocale, detectLocale } from '$lib/i18n.svelte';
+	import './layout.css';
 
-  let { children } = $props();
+	let { children } = $props();
 
-  $effect(() => {
-    const lang = page.url.searchParams.get('lang') || 'en';
-    setLocale(lang);
-  });
+	$effect(() => {
+		const lang = detectLocale(page.url.pathname);
+		setLocale(lang);
+	});
 </script>
 
 <svelte:head>
-  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+	{#if import.meta.env.PUBLIC_DEMO_MODE === 'true'}
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+		<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+	{/if}
 </svelte:head>
 
 {@render children()}
