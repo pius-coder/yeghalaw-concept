@@ -1,15 +1,9 @@
-export interface StoryblokAsset {
-	id: number;
+export interface LocalAsset {
+	id?: number;
 	alt: string | null;
-	name: string;
-	focus: string | null;
-	source: string | null;
-	title: string | null;
+	name?: string;
 	filename: string;
-	copyright: string | null;
-	fieldtype: string;
-	meta_data: Record<string, unknown>;
-	is_external_url: boolean;
+	copyright?: string | null;
 }
 
 export interface SeoFields {
@@ -17,7 +11,7 @@ export interface SeoFields {
 	meta_description?: string;
 	og_title?: string;
 	og_description?: string;
-	og_image?: StoryblokAsset;
+	og_image?: LocalAsset;
 	canonical_url?: string;
 	allow_indexing?: boolean;
 }
@@ -31,8 +25,8 @@ export interface HeroContent {
 	primary_button_link: string;
 	secondary_button_label: string;
 	secondary_button_link: string;
-	primary_image: StoryblokAsset;
-	secondary_image: StoryblokAsset;
+	primary_image: LocalAsset;
+	secondary_image: LocalAsset;
 	trust_text: string;
 	client_count: string;
 }
@@ -41,7 +35,7 @@ export interface ServiceItem {
 	_uid: string;
 	title: string;
 	short_description: string;
-	image: StoryblokAsset;
+	image: LocalAsset;
 	icon: string;
 	slug: string;
 	is_visible: boolean;
@@ -76,7 +70,7 @@ export interface AboutContent {
 export interface RecentWorkItem {
 	_uid: string;
 	title: string;
-	image: StoryblokAsset;
+	image: LocalAsset;
 	category: string;
 	short_description: string;
 	is_visible: boolean;
@@ -103,7 +97,7 @@ export interface TeamMember {
 	name: string;
 	job_title: string;
 	short_bio: string;
-	photo: StoryblokAsset;
+	photo: LocalAsset;
 	linkedin_url?: string;
 	email?: string;
 	is_visible: boolean;
@@ -150,8 +144,8 @@ export interface HomePageContent {
 
 export interface SiteSettings {
 	firm_name: string;
-	logo: StoryblokAsset;
-	logo_light: StoryblokAsset;
+	logo: LocalAsset;
+	logo_light: LocalAsset;
 	email: string;
 	phone_primary: string;
 	phone_secondary: string;
@@ -166,7 +160,7 @@ export interface SiteSettings {
 	copyright: string;
 	default_meta_title: string;
 	default_meta_description: string;
-	default_og_image: StoryblokAsset;
+	default_og_image: LocalAsset;
 }
 
 export interface Article {
@@ -175,14 +169,14 @@ export interface Article {
 	slug: string;
 	summary: string;
 	content: unknown;
-	cover_image: StoryblokAsset;
+	cover_image: LocalAsset;
 	author: string;
 	category: string;
 	publication_date: string;
 	featured: boolean;
 	meta_title?: string;
 	meta_description?: string;
-	og_image?: StoryblokAsset;
+	og_image?: LocalAsset;
 	content_html?: string;
 }
 

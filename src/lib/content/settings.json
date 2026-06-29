@@ -1,0 +1,31 @@
+{
+	"firm_name": "YEGHA LAW FIRM",
+	"logo": { "filename": "/images/yegha/logo.jpg", "alt": "YEGHA LAW FIRM" },
+	"logo_light": { "filename": "/images/yegha/logo-light.jpg", "alt": "YEGHA LAW FIRM" },
+	"email": "contact@yeghalawfirm.com",
+	"phone_primary": "+237 697 383 421",
+	"phone_secondary": "",
+	"whatsapp": "+237 697 383 421",
+	"address": "Douala, Cameroun",
+	"business_hours": "Lun-Ven: 8h00 - 17h00",
+	"google_maps_url": "",
+	"linkedin_url": "",
+	"facebook_url": "",
+	"instagram_url": "",
+	"footer_description": {
+		"fr": "Cabinet d'avocats basé à Douala.",
+		"en": "Law firm based in Douala."
+	},
+	"copyright": {
+		"fr": "© YEGHA LAW FIRM. Tous droits réservés.",
+		"en": "© YEGHA LAW FIRM. All rights reserved."
+	},
+	"default_meta_title": {
+		"fr": "YEGHA LAW FIRM - Cabinet d'avocats à Douala, Cameroun",
+		"en": "YEGHA LAW FIRM - Law Firm in Douala, Cameroon"
+	},
+	"default_meta_description": {
+		"fr": "Cabinet d'avocats spécialisé en droit des affaires, droit immobilier, droit de la famille et droit du travail à Douala, Cameroun.",
+		"en": "Law firm specialized in corporate law, real estate law, family law and labor law in Douala, Cameroon."
+	}
+}

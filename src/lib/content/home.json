@@ -1,0 +1,207 @@
+{
+	"hero": {
+		"eyebrow": { "fr": "Cabinet juridique", "en": "Law Firm" },
+		"title": {
+			"fr": "Votre partenaire juridique de confiance",
+			"en": "Your trusted legal partner"
+		},
+		"description": {
+			"fr": "Cabinet d'avocats spécialisé en droit des affaires, droit immobilier, droit de la famille et droit du travail à Douala, Cameroun.",
+			"en": "Law firm specialized in corporate law, real estate law, family law and labor law in Douala, Cameroon."
+		},
+		"primary_button_label": { "fr": "Prendre rendez-vous", "en": "Book a consultation" },
+		"primary_button_link": "/contact",
+		"secondary_button_label": { "fr": "Nos services", "en": "Our services" },
+		"secondary_button_link": "#services",
+		"primary_image": { "filename": "/images/yegha/team-terence.jpg", "alt": "YEGHA LAW FIRM" },
+		"secondary_image": { "filename": "/images/yegha/corporate-law.jpg", "alt": "Legal expertise" },
+		"trust_text": { "fr": "Ils nous font confiance", "en": "Trusted by" },
+		"client_count": "100+"
+	},
+	"services": [
+		{
+			"id": "droit-des-affaires",
+			"title": { "fr": "Droit des affaires", "en": "Corporate Law" },
+			"short_description": {
+				"fr": "Accompagnement juridique complet pour entreprises et commerçants.",
+				"en": "Complete legal support for businesses and merchants."
+			},
+			"image": { "filename": "", "alt": "" },
+			"icon": "building",
+			"slug": "droit-des-affaires",
+			"is_visible": true
+		},
+		{
+			"id": "droit-immobilier",
+			"title": { "fr": "Droit immobilier", "en": "Real Estate Law" },
+			"short_description": {
+				"fr": "Conseil et assistance en matière foncière et immobilière.",
+				"en": "Advice and assistance in land and real estate matters."
+			},
+			"image": { "filename": "", "alt": "" },
+			"icon": "house",
+			"slug": "droit-immobilier",
+			"is_visible": true
+		}
+	],
+	"whyUs": {
+		"eyebrow": { "fr": "Pourquoi nous choisir", "en": "Why choose us" },
+		"title": {
+			"fr": "Une expertise juridique à votre service",
+			"en": "Legal expertise at your service"
+		},
+		"description": {
+			"fr": "Nous mettons notre expérience et notre dévouement à votre service pour défendre vos intérêts.",
+			"en": "We put our experience and dedication at your service to defend your interests."
+		},
+		"items": [
+			{
+				"id": "expertise",
+				"title": { "fr": "Expertise reconnue", "en": "Recognized expertise" },
+				"description": {
+					"fr": "Plus de 15 ans d'expérience dans divers domaines du droit.",
+					"en": "Over 15 years of experience in various areas of law."
+				},
+				"icon": "seal-check"
+			},
+			{
+				"id": "approche-personnalisee",
+				"title": { "fr": "Approche personnalisée", "en": "Personalized approach" },
+				"description": {
+					"fr": "Chaque dossier est unique, chaque client mérite une attention particulière.",
+					"en": "Each case is unique, every client deserves individual attention."
+				},
+				"icon": "heart"
+			},
+			{
+				"id": "cabinet-bilingue",
+				"title": { "fr": "Cabinet bilingue", "en": "Bilingual firm" },
+				"description": {
+					"fr": "Services juridiques disponibles en français et en anglais.",
+					"en": "Legal services available in French and English."
+				},
+				"icon": "translate"
+			}
+		]
+	},
+	"stats": {
+		"items": [
+			{
+				"id": "clients",
+				"value": "100",
+				"suffix": "+",
+				"label": { "fr": "Clients satisfaits", "en": "Satisfied clients" }
+			},
+			{
+				"id": "experience",
+				"value": "15",
+				"suffix": "+",
+				"label": { "fr": "Années d'expérience", "en": "Years of experience" }
+			},
+			{
+				"id": "domaines",
+				"value": "8",
+				"suffix": "",
+				"label": { "fr": "Domaines de compétence", "en": "Areas of expertise" }
+			}
+		]
+	},
+	"about": {
+		"eyebrow": { "fr": "À propos", "en": "About" },
+		"title": { "fr": "Notre cabinet", "en": "Our firm" },
+		"description": {
+			"fr": "Le Cabinet YEGHA LAW FIRM est un cabinet d'avocats basé à Douala, Cameroun.",
+			"en": "YEGHA LAW FIRM is a law firm based in Douala, Cameroon."
+		},
+		"primary_button": {
+			"label": { "fr": "Contactez-nous", "en": "Contact us" },
+			"link": "/contact"
+		},
+		"secondary_button": {
+			"label": { "fr": "En savoir plus", "en": "Learn more" },
+			"link": "#about"
+		},
+		"mission": {
+			"fr": "Offrir des services juridiques de qualité supérieure.",
+			"en": "Provide superior quality legal services."
+		},
+		"vision": {
+			"fr": "Devenir le cabinet de référence au Cameroun.",
+			"en": "Become the leading law firm in Cameroon."
+		},
+		"values": {
+			"fr": "Intégrité, Excellence, Engagement.",
+			"en": "Integrity, Excellence, Commitment."
+		}
+	},
+	"recentWork": {
+		"eyebrow": { "fr": "Réalisations", "en": "Recent work" },
+		"title": { "fr": "Nos récentes réalisations", "en": "Our recent work" },
+		"description": {
+			"fr": "Découvrez quelques-uns de nos dossiers récents.",
+			"en": "Discover some of our recent cases."
+		},
+		"items": []
+	},
+	"faq": {
+		"eyebrow": { "fr": "FAQ", "en": "FAQ" },
+		"title": { "fr": "Questions fréquentes", "en": "Frequently asked questions" },
+		"description": {
+			"fr": "Trouvez rapidement une réponse à vos questions.",
+			"en": "Find answers to your questions quickly."
+		},
+		"items": [
+			{
+				"id": "rendez-vous",
+				"question": { "fr": "Comment prendre rendez-vous ?", "en": "How to book an appointment?" },
+				"answer": {
+					"fr": "Vous pouvez nous contacter par téléphone ou via notre formulaire de contact en ligne.",
+					"en": "You can contact us by phone or via our online contact form."
+				},
+				"is_visible": true
+			},
+			{
+				"id": "honoraires",
+				"question": { "fr": "Quels sont vos honoraires ?", "en": "What are your fees?" },
+				"answer": {
+					"fr": "Nos honoraires sont déterminés en fonction de la nature et de la complexité du dossier lors d'un premier entretien.",
+					"en": "Our fees are determined based on the nature and complexity of the case during an initial consultation."
+				},
+				"is_visible": true
+			}
+		]
+	},
+	"cta": {
+		"title": { "fr": "Besoin d'un conseil juridique ?", "en": "Need legal advice?" },
+		"description": {
+			"fr": "Contactez-nous dès aujourd'hui pour une consultation.",
+			"en": "Contact us today for a consultation."
+		},
+		"button_label": { "fr": "Nous contacter", "en": "Contact us" },
+		"button_link": "/contact",
+		"secondary_note": { "fr": "Réponse sous 24 heures", "en": "Response within 24 hours" }
+	},
+	"team": {
+		"eyebrow": { "fr": "Notre équipe", "en": "Our team" },
+		"title": { "fr": "Des avocats compétents et dévoués", "en": "Competent and dedicated lawyers" },
+		"description": {
+			"fr": "Une équipe pluridisciplinaire à votre service.",
+			"en": "A multidisciplinary team at your service."
+		},
+		"members": [
+			{
+				"id": "terence-yegha",
+				"name": { "fr": "Terence Yegha", "en": "Terence Yegha" },
+				"job_title": { "fr": "Avocat principal", "en": "Lead Attorney" },
+				"short_bio": {
+					"fr": "Fondateur du cabinet, spécialiste en droit des affaires.",
+					"en": "Founder of the firm, specialist in corporate law."
+				},
+				"photo": { "filename": "", "alt": "Terence Yegha" },
+				"linkedin_url": "",
+				"email": "",
+				"is_visible": true
+			}
+		]
+	}
+}

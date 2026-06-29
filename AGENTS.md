@@ -20,7 +20,7 @@ A reusable template for reverse-engineering any website into a clean, modern Sve
 - **UI:** Tailwind CSS v4 (CSS-first config, `@theme` tokens, `@import "tailwindcss"`)
 - **Icons:** Phosphor Svelte (import individual icons from `phosphor-svelte/lib/IconName`)
 - **Styling:** Tailwind CSS v4 with CSS custom property design tokens
-- **CMS:** Storyblok (`@storyblok/svelte` v7)
+- **CMS:** Decap CMS (Git-based, files in `src/lib/content/`)
 - **Testing:** Vitest v4
 - **Deployment:** Cloudflare Pages (`@sveltejs/adapter-cloudflare`)
 
@@ -54,7 +54,7 @@ src/
     +layout.svelte      # Root layout
     +page.svelte        # Index page (redirects to /en/)
     [lang=locale]/      # Multilingual routes (en/fr)
-      +layout.svelte    # Locale-aware layout with Storyblok Bridge
+      +layout.svelte    # Locale-aware layout
       +page.svelte      # CMS-driven home page with all sections
       +page.server.ts   # Loads CMS data (home, settings)
       blog/             # Dynamic blog listing + [slug] detail
@@ -64,12 +64,14 @@ src/
     contact/
     privacy/
   lib/
-    cms/                # Storyblok CMS layer
-      client.ts         # Storyblok client init
+    cms/                # CMS types (Legacy — kept for component compatibility)
       types.ts          # TypeScript interfaces (HomePageContent, SiteSettings, Article, etc.)
-      queries.ts        # CMS query functions (getHomePage, getSiteSettings, etc.)
-      mappers.ts        # Response-to-type mappers
       fallback.ts       # Default content when CMS unavailable
+    content/            # Decap CMS content layer
+      types.ts          # Bilingual storage types
+      loaders.ts        # Content loader functions (getHomeContent, getSiteSettings, etc.)
+      home.json         # Home page content (bilingual)
+      settings.json     # Site settings (bilingual)
     components/
       ui/               # Primitive components (buttons, badges, links, CloudinaryImage, etc.)
       layout/           # Layout components (NavBar, Footer)
